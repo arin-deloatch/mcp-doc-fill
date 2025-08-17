@@ -1,6 +1,11 @@
-def main():
-    print("Hello from mcp-doc-fill!")
+from typing import Any
+import httpx
+import logging
+from mcp.server.fastmcp import FastMCP
 
+# Create an MCP server
+mcp = FastMCP("DocFill")
 
 if __name__ == "__main__":
-    main()
+    # Initialize and run the server
+    mcp.run(transport='stdio')
